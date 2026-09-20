@@ -13,7 +13,7 @@ const reversible = trigger => ({
 
 export function MotionDirector() {
   useLayoutEffect(() => {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;if (matchMedia('(max-width:760px)').matches) return;
     const context = gsap.context(() => {
       gsap.utils.toArray('[data-reveal]').forEach(element => {
         const timeline=gsap.timeline({scrollTrigger:reversible(element)});
