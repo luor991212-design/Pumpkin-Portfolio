@@ -1,0 +1,30 @@
+{
+  "name": "pumpkin-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "homepage": "https://luor991212-design.github.io/Pumpkin-Portfolio/",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "deploy": "gh-pages -d dist",
+    "prepare:assets": "node scripts/prepare-assets.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.0.0",
+    "@shadergradient/react": "2.4.20",
+    "camera-controls": "2.9.0",
+    "gsap": "^3.13.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "three": "0.169.0",
+    "three-stdlib": "2.35.15"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0",
+    "sharp": "^0.34.0",
+    "ffmpeg-static": "^5.2.0",
+    "gh-pages": "^6.3.0"
+  }
+}
