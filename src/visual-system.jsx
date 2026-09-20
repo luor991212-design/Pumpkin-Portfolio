@@ -64,6 +64,7 @@ function PointerFlowLayer({hostRef}){
 export function HeroVisual({stage,onSettled,onTextCue}){
   const root=useRef(null),canvasRef=useRef(null),t1f=useRef(null),t2f=useRef(null),t1r=useRef(null),t2r=useRef(null),controller=useRef(null),settled=useRef(onSettled),textCue=useRef(onTextCue);settled.current=onSettled;textCue.current=onTextCue;
   useEffect(()=>{
+    if(matchMedia('(max-width:760px)').matches){node.dataset.playback='static';return;}
     const canvas=canvasRef.current,node=root.current,gl=canvas.getContext('webgl',{alpha:false,antialias:false,powerPreference:'high-performance'});if(!gl){node.dataset.renderer='unavailable';return;}
     const fragment=`precision highp float;
       uniform sampler2D u_image;uniform vec2 u_resolution,u_view,u_imageSize;uniform float u_time;uniform vec4 u_drops[16];
