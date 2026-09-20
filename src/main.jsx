@@ -63,7 +63,7 @@ function drawTaperedHalo(ctx,center,length,width,height,radius,pad){
 function CardHalo(){
   const canvasRef=useRef(null);
   useEffect(()=>{
-    const canvas=canvasRef.current,parent=canvas?.parentElement;if(!canvas||!parent)return;
+    const canvas=canvasRef.current,parent=canvas?.parentElement;if(!canvas||!parent)return;if(matchMedia('(max-width:760px)').matches)return;
     const ctx=canvas.getContext('2d'),pad=96,duration=7600,reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
     const off=document.createElement('canvas'),offCtx=off.getContext('2d');
     let width=0,height=0,radius=22,frame=0,active=false,phase=0,started=0;
